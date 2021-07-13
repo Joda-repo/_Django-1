@@ -26,11 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-############
-import _locale
-_locale._getdefaultlocale = (lambda *args: ['en_US', 'utf8'])
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +38,8 @@ INSTALLED_APPS = [
 
     'mainapp',
     'authapp',
+    'basketapp',
+    'adminapp',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +129,5 @@ MEDIA_ROOT = (
 )
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
+
+LOGIN_URL = '/auth/login/'
